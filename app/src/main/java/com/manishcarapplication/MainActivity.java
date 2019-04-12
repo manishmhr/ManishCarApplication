@@ -28,10 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnCar= findViewById(R.id.btnCar);
         btnDiesel= findViewById(R.id.btnDiesel);
-
-
         final int[] count = {0};
-
         btnCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,27 +41,23 @@ public class MainActivity extends AppCompatActivity {
                 engine= etEngine.getText().toString();
                 count[0] = count[0] +1;
 
-                Manish_Car manishCar = new Manish_Car(make,year,color,price,engine, count[0]);
+                Manish_Car manishCar = new Manish_Car(make,year,color,price,engine,
+                        count[0]);
                 etAnswer.setText(etAnswer.getText()+ manishCar.CreatesCar());
-
-
-
             }
         });
         btnDiesel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String make, year, color, price, engine;
-
                 make= etMake.getText().toString();
                 year= etYear.getText().toString();
                 color= etColor.getText().toString();
                 price= etPrice.getText().toString();
                 engine= etEngine.getText().toString();
                 count[0] = count[0] +1;
-
-                Manish_Car manishCar = new Manish_Car(make,year,color,price,engine, count[0]);
+                Manish_Car manishCar = new Manish_Car(make,year,color,price,engine,
+                        count[0]);
                 etAnswer.setText(etAnswer.getText()+ manishCar.CreatesCar());
             }
         });
